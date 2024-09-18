@@ -16,6 +16,7 @@ public class FilterUsingStream {
 		WebDriver dr=new ChromeDriver();
 		dr.manage().window().maximize();
 		dr.get("https://rahulshettyacademy.com/seleniumPractise/#/offers");
+		System.out.println("Filter using Stream");
 		dr.findElement(By.id("search-field")).sendKeys("Rice");
 		List<WebElement> veg=dr.findElements(By.xpath("//tr/td[1]"));
 		List<WebElement> filteredlist=veg.stream().filter(s->s.getText().contains("Rice")).collect(Collectors.toList());
