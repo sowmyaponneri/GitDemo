@@ -20,6 +20,12 @@ public class Test1 {
 		names.add("Roshan");
 		names.add("Anand");
 		
+		names.add("Anand1");
+		names.add("Anand2");
+		names.add("Anand3");
+		names.add("Anand4");
+		names.add("Anand5");
+		
 		long count=names.stream().filter(s->s.startsWith("A")).count();
 		System.out.println("Count the names starts with letter A : "+count);
 	}
